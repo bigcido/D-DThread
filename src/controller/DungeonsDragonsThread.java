@@ -56,13 +56,13 @@ public class DungeonsDragonsThread extends Thread {
                 }
             }
 
-            // Verifica se o cavaleiro está na região da pedra brilhante (1500m a 1600m)
+           
             if (distance >= 1500 && distance <= 1600 && !PegarPedraBrilhante && !PegarTocha) {
                 try {
                     semaforoPedra.acquire();
                     if (!PegarPedraBrilhante && !PegarTocha) {
                         PegarPedraBrilhante = true;
-                        velocidade += 2; // Aumenta a velocidade
+                        velocidade += 2; 
                         System.out.println("Cavaleiro #" + TID + " pegou a pedra brilhante e agora sua velocidade eh " + velocidade + " m/50ms.");
                     }
                 } catch (InterruptedException e1) {
